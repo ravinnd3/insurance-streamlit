@@ -4,7 +4,7 @@ import pickle
 import os
 
 # Load trained model
-model = pickle.load(open("Insurance_premium_prediction.sav", "rb"))
+model = pickle.load("Insurance_premium_prediction.sav")
 
 # Title
 st.title("Insurance Charge Predictor")
