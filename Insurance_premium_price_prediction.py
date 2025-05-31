@@ -2,10 +2,13 @@ import streamlit as st
 import numpy as np
 import pickle
 import os
+import sklearn
 
+print("path of os ",os.path)
 # Load trained model
-model = pickle.load("Insurance_premium_prediction.sav")
-
+#model = pickle.load("Insurance_premium_prediction.sav")
+with open("Insurance_premium_prediction.sav", "rb") as file:
+    model = pickle.load(file)
 # Title
 st.title("Insurance Charge Predictor")
 
